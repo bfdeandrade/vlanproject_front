@@ -26,7 +26,7 @@ function autenticar(){
 function tratarResultado(res){
    if (res.status == 200) { // ok
        document.getElementById("erroMSG").innerHTML = "";
-       res.json().then(console.log("Estou autenticado"));
+       res.json().then(console.log(res));
    }
    else if (res.status == 403){  // usuario valido, senha invalida
        document.getElementById("erroMSG").innerHTML = "Senha Inválida";
