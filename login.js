@@ -18,7 +18,6 @@ function autenticar(){
             'Content-type' : 'application/json'
         }
     }
-
     fetch("http://localhost:8080/login", cabecalho)
         .then(res => tratarResultado(res));     
 }
