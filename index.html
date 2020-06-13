@@ -1,65 +1,50 @@
-<html>
-    <head>
-        <title>.: By Prof. Isidro :.</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" href="estilo.css">
-        <script type="text/javascript" src="script.js"></script>
-    </head>
-    <body onload="buscarUsuarios();">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12"> 
-                    <h1 id="titulo"> Exemplo de pagina </h1>
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Exemplo 1</h3>
-                    <p>Mussum Ipsum, cacilds vidis litro abertis. Pra lá , depois divoltis porris, paradis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Si num tem leite então bota uma pinga aí cumpadi! Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>Exemplo 2</h3>
-
-                    <p>Mussum Ipsum, cacilds vidis litro abertis. Pra lá , depois divoltis porris, paradis. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Si num tem leite então bota uma pinga aí cumpadi! Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.</p>
-                    <button class="btn btn-primary" id="mybtn" onclick="mudaTexto();">Clique aqui!</button>
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <h4>Saiba mais 1</h4>
-
-                </div>
-                <div class="col-md-4">
-                    <h4>Saiba mais 2</h4> 
-
-                </div>
-                <div class="col-md-4">
-                    <h4>Saiba mais 3</h4>
-
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-md-12">
-                    <h3>Listagem de Usuários</h3>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12" id="resultado">
-
-                </div>
-            </div>
+<!doctype html>
+<html lang="pt">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript" src="index.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+   	<div class="container-fluid" style="background-image: url('images/background2.jpg'); background-size:100% 100%">
+	<div class="row" >
+		<div class="col-md-12">
+			<div class="row" style="margin-top: 50px">
+				<div class="col-md-4 text text-center">
+					<img alt="Bootstrap Image Preview" src="images/finalbreno.png" class="rounded-circle" />
+				</div>
+				<div class="col-md-4 text-center">
+					<img alt="Bootstrap Image Preview" src="images/cristian2.jpg" style="margin-bottom: 60px" class="rounded-circle" />
+				</div>
+				<div class="col-md-4 text-center">
+					<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="rounded-circle" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 text-center" style="margin-top: 30px">
+					<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="rounded-circle" />
+				</div>
+				<div class="col-md-4 text-center">
+					 
+					<button type="button" class="btn btn-lg text-center" style="margin-top: 30px margin-bottom: 50px" onclick="irPaginaLogin();">
+						<img alt="Bootstrap Image Preview" src="images/itau150x150.png" class="rounded" />
+					</button>
+				</div>
+				<div class="col-md-4 text-center" style="margin-top: 30px">
+					<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" class="rounded-circle" />
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	</div>
 
 
-        </div>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    </body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
 </html>
