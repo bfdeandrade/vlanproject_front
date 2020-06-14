@@ -40,6 +40,14 @@ function tratarResultado(res){
 function logarUsuario(res){
     // em uma situação da "vida real", eu não armazendo o objeto
     // eu armazendo um TOKEN de autenticacao
-    localStorage.setItem("userVlan",JSON.stringify(res));
-    window.location="perfil.html";
+    //localStorage.setItem("userVlan",JSON.stringify(res));
+    //window.location="perfil.html";
+    //########
+    if(res.operador == true){
+      localStorage.setItem("userVlan",JSON.stringify(res));
+      window.location="perfil_operador.html";
+    } else{
+      localStorage.setItem("userVlan",JSON.stringify(res));
+      window.location="perfil.html"
+    }
 }
