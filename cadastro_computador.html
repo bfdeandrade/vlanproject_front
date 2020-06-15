@@ -5,32 +5,35 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script type="text/javascript" src="cadastro_computador.js"></script>
+    <link rel="stylesheet" type="text/css" href="cadastro.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <div class="container-fluid" style="background-image: url('images/background2.jpg'); background-size:100% 100%">
-    <div class="col-md-12">
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center" id="headerLista">
+          <h3 id="titulo"> VLAN Manager - Criar Computador</h3>
+      </div>
+    </div>
+    <div class="col-md-4" style="margin-left: 460px">
       <form role="form">
           <!-- Search form -->
-          <label for="inputNumSerieComputador">
-            Número de série do computador
+          <label for="inputCodigoConnector" id="texto1">
+            
           </label>
-          <input class="form-control" type="text" id="inputNumSerieComputador">
-          <label for="inputCodigoConnector">
-            Número do código do conector
-          </label>
-          <input type="text" class="form-control" id="inputCodigoConnector" />
+          <input type="text" class="form-control" placeholder="Número do código Conector" id="inputCodigoConnector" />
           <div class="row">
             <div class="form-group col-md-12">
-              <label for="txtJustificativa">Descrição</label>
-                <textarea class="form-control" id="txtDescricao" maxlength="200" rows="3"></textarea>
+              <label for="txtJustificativa" id="texto2"></label>
+                <textarea class="form-control" placeholder="Descrição" id="txtDescricao" maxlength="200" rows="3"></textarea>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12" style="margin-left: 50px">
                 <button class="btn btn-primary" onclick="cadastrarComputador();">Cadastrar Computador</button>
+                <button class="btn btn-primary" onclick="cancelarCadastroComputador(); return false">Cancelar Cadastro</button>
             </div>
             <div class="col-md-12">
-                <button class="btn btn-primary" onclick="cancelarCadastroComputador(); return false">Cancelar Cadastro</button>
+                
             </div>
           </div>
       </form>

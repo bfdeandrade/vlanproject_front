@@ -9,8 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
 }
-
-h3 {
+#titulo {
 	font-size: calc(1.8em + 2.0vw);
 	font-weight: 700;
 	letter-spacing: .01em;
@@ -18,34 +17,32 @@ h3 {
 	text-shadow: .022em .022em .022em #111;
 	color: #fff;
 }
-input{
-		display: block;
-		appearance: none;
-		outline: 0;
-		border: 1px solid fade(white, 40%);
-		background-color: fade(white, 20%);
-		width: 250px;
-		
-		border-radius: 3px;
-		padding: 10px 15px;
-		margin: 0 auto 10px auto;
-		display: block;
-		text-align: center;
-		font-size: 18px;
-		
-		color: white;
-		
-		transition-duration: 0.25s;
-		font-weight: 300;
-		
-		&:hover{
-			background-color: fade(white, 40%);
-		}
-		
-		&:focus{
-			background-color: white;
-			width: 300px;
-			
-			color: @prim;
-		}
+#bioUser {
+	font-size: 20px;
+	color: white;
+
+}
+#fotoUser{
+	width: "200";
+	height: "200";
+}
+#listaSolicitacoes{
+	color: white;
+	font-size: 15px;
+}
+#headerLista{
+	color: white;
+	font-size: 25px;
+}
+#colunaButao1{
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+#colunaButao2{
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+#colunaButao3{
+	margin-top: 50px;
+	margin-bottom: 30px;
 }

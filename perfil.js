@@ -1,19 +1,19 @@
 var templateFoto = '<img src="{{FOTO}}" width="100%"> ';
-var templateBio  = '<h3> {{NOME}} </h3>'+
+var templateBio  = '<h3> <STRONG> {{NOME}}  </STRONG></h3>'+
                    '<p> '+
                    '<strong>RACF :</strong> {{RACF}} <br>'+
                    '<strong>EMAIL:</strong> {{EMAIL}} <br>'+
                    '<strong>DEPTO:</strong> {{DEPARTAMENTO}}'+
                    '</p>'+
-                   '<p> <STRONG> Computador </STRONG>'+
-                   'Num Serie {{NUMSERIE}} <br>'+
-                   'Descricao: {{DESCRICAO}} <br>'+
-                   'Conector REDE: {{CONECTOR}} </p>';
+                   '<p> <STRONG> Número de série </STRONG>'+
+                   '<STRONG>do Computador: </STRONG> {{NUMSERIE}} <br>'+
+                   '<STRONG>Descrição:</STRONG> {{DESCRICAO}} <br>'+
+                   '<STRONG>ID do Ponto de Rede<STRONG>: {{CONECTOR}} </p>';
 
-var templateSol = '<div class="row">'+
+var templateSol = '<div class="row" style="">'+
                      '<div class="col-md-12">'+
-                       '<a href="detalhe.html?numero={{NUMSOL}}"> ' +
-                            '{{DATA}} De:{{ORIGEM}} / Para:{{DESTINO}}'+  
+                       '<a href="detalhe.html?numero={{NUMSOL}}" style="font-weight:bold; font-size:17px"> ' +
+                            'Número da solicitação: {{NULSOL2}} | Data Solicitação: {{DATA}} | De:{{ORIGEM}} ({{VLANORIGEM}}) | Para:{{DESTINO}} ({{VLANDESTINO}})'+  
                         '</a>'+
                      '</div>'+
                   '</div>';
@@ -51,9 +51,13 @@ function mostrarPerfil(){
         var solic = user.solicitacoes[i];  // apenas para simplificar
         
         strSol = strSol + templateSol.replace("{{NUMSOL}}",solic.numero)
+                                     .replace("{{NULSOL2}}",solic.numero)
                                      .replace("{{DATA}}", solic.dataSolicitacao)
                                      .replace("{{ORIGEM}}",solic.origem.nome)
-                                     .replace("{{DESTINO}}",solic.destino.nome);
+                                     .replace("{{DESTINO}}",solic.destino.nome)
+                                     .replace("{{VLANORIGEM}}",solic.origem.vlan)
+                                     .replace("{{VLANDESTINO}}",solic.destino.vlan);
+
 
     }
     document.getElementById("listaSolicitacoes").innerHTML = strSol;

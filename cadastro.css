@@ -10,14 +10,28 @@ body {
   -moz-osx-font-smoothing: grayscale;      
 }
 
-h3 {
-	font-size: calc(1.8em + 2.0vw);
-	font-weight: 700;
-	letter-spacing: .01em;
-	padding: 2rem 0 0 4.5rem;
-	text-shadow: .022em .022em .022em #111;
-	color: #fff;
+#titulo {
+	font-size: 40px;
+	margin-top: 30px;
+	color: white;
 }
+#texto1 {
+	font-size: 20px;
+	color: white;
+}
+#texto2{
+	font-size: 20px;
+	color: white;
+}
+#texto3{
+	font-size: 20px;
+	color: white;
+}
+#texto4{
+	font-size: 20px;
+	color: white;
+}
+
 input{
 		display: block;
 		appearance: none;

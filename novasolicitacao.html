@@ -2,12 +2,13 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script type="text/javascript" src="novasolicitacao.js"> </script>
+        <link rel="stylesheet" type="text/css" href="novasolicitacao.css">
     </head>
     <body onload="preencherDeptos();">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 text-center">
-                    <h3> VLan Manager</h3>
+                <div class="col-md-12 text-center" id="titulo">
+                    <h3> VLAN Manager - Criar Solicitação</h3>
                 </div>
             </div>
             <div class="row">
@@ -19,21 +20,21 @@
             <div class="row">
                 
                 <div class="form-group col-md-12">
-                    <label for="txtData">Data da Solicitação</label>
+                    <label for="txtData" id="texto1"><STRONG>Data da Solicitação</STRONG></label>
                     <input type="text" class="form-control" id="txtData" placeholder="dd/mm/aaaa">
                 </div>
             </div>
             <div class="row">
                     <div class="form-group col-md-12">
-                      <label for="txtNovoDepto">Novo Departamento</label>
+                      <label for="txtNovoDepto" id="texto2"><STRONG>Novo Departamento</STRONG></label>
                       <select class="form-control" id="txtNovoDepto">
                         <!-- esse caboclo aqui vai ser preenchido automaticamente -->
                       </select>
                     </div>
             </div>
             <div class="row">
-                    <div class="form-group col-md-12">
-                      <label for="txtJustificativa">Justificativa</label>
+                    <div class="form-group col-md-12" id="texto3">
+                      <label for="txtJustificativa"><STRONG>Justificativa</STRONG></label>
                       <textarea class="form-control" id="txtJustificativa" maxlength="200" rows="3"></textarea>
                     </div>
             </div>
@@ -41,14 +42,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <button class="btn btn-primary" onclick="enviarSolicitacao();">Enviar Dados</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
                     <button class="btn btn-primary" onclick="cancelarSolicitacao();">Cancelar Solicitação</button>
                 </div>
             </div>
-   
 
         </div>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

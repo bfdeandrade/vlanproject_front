@@ -1,8 +1,6 @@
-function logout(){
-    localStorage.removeItem("userVlan");
-    window.location = "login.html";
+function cancelarCadastroUsuario(){
+    window.location = "perfil_operador.html";
 }
-
 function preencherDeptos(){
 
     fetch("http://localhost:8080/departamentos")

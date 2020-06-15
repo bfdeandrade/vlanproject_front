@@ -1,0 +1,30 @@
+body {
+  background: #FF7200; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, FF7200, #8DC26F);
+  background: -moz-linear-gradient(right, #FF7200, #FF9933);
+  background: -o-linear-gradient(right, #FF7200, #FF9933);
+  background: linear-gradient(to left, #FF7200, #FF9933);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+#titulo {
+	font-size: calc(2.4em + 2.6vw);
+	font-weight: 700;
+	letter-spacing: .01em;
+	padding: 2rem 0 0 4.5rem;
+	text-shadow: .022em .022em .022em #111;
+	color: #fff;
+}
+#texto1 {
+	font-size: 20px;
+	color: white;
+}
+#texto2{
+	font-size: 20px;
+	color: white;
+}
+#texto3{
+	font-size: 20px;
+	color: white;
+}

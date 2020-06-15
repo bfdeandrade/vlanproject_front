@@ -2,12 +2,13 @@
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script type="text/javascript" src="perfil.js"> </script>
+        <link rel="stylesheet" type="text/css" href="perfil.css">
     </head>
     <body onload="mostrarPerfil();">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="text-center">VLan Manager</h3>
+                    <h3 class="text-center" id="titulo">VLAN Manager 1.0</h3>
                 </div>
             </div>
 
@@ -32,10 +33,11 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <a href="novasolicitacao.html" class="btn btn-primary">Nova Solicitacao</a>
+                    <a href="novasolicitacao.html" class="btn btn-primary" style="margin-top: 50px">Nova Solicitacao</a>
                 </div>
             </div>
             <!-- sequencia de linhas com as solicitacoes -->
+            <h3 style="margin-top: 20px" id="headerLista">Lista de solicitações</h3>
             <div id="listaSolicitacoes">
 
             </div>

@@ -5,43 +5,46 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script type="text/javascript" src="cadastro_departamento.js"></script>
+    <link rel="stylesheet" type="text/css" href="cadastro.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <body>
-    <div class="container-fluid" style="background-image: url('images/background2.jpg'); background-size:100% 100%">
-    <div class="col-md-12">
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 text-center" id="headerLista" style="margin-bottom: 30px">
+          <h3 id="titulo"> VLAN Manager - Criar Departamento</h3>
+      </div>
+    </div>
+    <div class="col-md-4" style="margin-left: 460px">
       <form role="form">
         <div class="form-group">
-          <label for="inputAndarDepartamento">
-            Andar do Departamento:
+          <label for="inputNomeDepartamento" id="texto2">
+            
           </label>
-          <input type="text" class="form-control" id="inputAndarDepartamento" />
+          <input type="text" class="form-control" placeholder="Andar do Departamento:" id="inputAndarDepartamento" />
         </div>
         <div class="form-group">
-          <label for="inputNomeDepartamento">
-            Nome do departamento:
+          <label for="inputNomeDepartamento" id="texto2">
+
           </label>
-          <input type="text" class="form-control" id="inputNomeDepartamento" />
+          <input type="text" class="form-control" placeholder="Nome do departamento" id="inputNomeDepartamento" />
         </div>
         <div class="form-group">
-          <label for="inputUnidadeDepartamento">
-            Unidade:
+          <label for="inputUnidadeDepartamento" id="texto3">
+            
           </label>
-          <input type="text" class="form-control" id="inputUnidadeDepartamento" />
+          <input type="text" class="form-control" placeholder="Unidade" id="inputUnidadeDepartamento" />
         </div>
         <div class="form-group">
-          <label for="inputVlanDepartamento">
-            VLAN do departamento:
+          <label for="inputVlanDepartamento" id="texto4">
+  
           </label>
-          <input type="text" class="form-control" id="inputVlanDepartamento" />
+          <input type="text" class="form-control" placeholder="VLAN" id="inputVlanDepartamento" />
         </div>
 
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12" style="margin-left: 5px">
             <button class="btn btn-primary" onclick="cadastrarDepartamento();">Cadastrar Departamento</button>
-          </div>
-        <div class="row">
-          <div class="col-md-12">
             <button class="btn btn-primary" onclick="cancelarDepartamento();return false;">Cancelar cadastro</button>
           </div>
         </div>

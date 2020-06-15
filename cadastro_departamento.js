@@ -34,6 +34,6 @@ function adicionarDepartamento(res){
     fetch("http://localhost:8080/departamentos/"+res.departamento.id)
        .then(res2 => res2.json())
        .then(res2 => window.location="perfil_operador.html")
-       .then(alert("Usuario cadastrado com sucesso"))
+       .then(alert("Departamento cadastrado com sucesso"))
        .catch(err => alert("Erro ao cadastrar usuario"));
 }
