@@ -28,11 +28,11 @@ function tratarResultado(res){
        res.json().then(res=>logarUsuario(res));
    }
    else if (res.status == 403){  // usuario valido, senha invalida
-       document.getElementById("erroMSG").innerHTML = "Senha Inválida";
+       document.getElementById("erroMSG").innerHTML = "Senha incorreta";
 
    }
    else if (res.status == 404){  // usuario invalido
-       document.getElementById("erroMSG").innerHTML = "Usuário Desconhecido";
+       document.getElementById("erroMSG").innerHTML = "Não existe, por favor, efetuar cadastro";
    }
 }
 

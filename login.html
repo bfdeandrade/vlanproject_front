@@ -3,33 +3,35 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <title>.: IsidroCorp :.</title>
         <script type="text/javascript" src="login.js"></script>
-
+        <link rel="stylesheet" type="text/css" href="login.css">
     </head>
     <body>
         <div class="container">
             <div class="row " id="titulo">
+                <div class="col-md-4 text-center" style="margin-top: 50px; margin-left: 340px" >
+                    <img alt="Bootstrap Image Preview" src="images/logo2200x200.png" class="rounded" />
+                </div>
                 <div class="col-md-12">
-                    <h3 class="text-center">Vlan Manager</h3>
+                    <h3 class="text-center" style="margin-bottom: 30px">VLAN Manager 1.0</h3>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4" style="margin-left: 380px">
                     <div class="form-group">
-                        <label for="txtEmail">Seu email</label>
+                        <label for="txtEmail" style="color: white; font-size: 30px">Email</label>
                         <input type="email" class="form-control" id="txtEmail" aria-describedby="emailHelp" placeholder="email@exemplo.com">
-                        <small id="emailHelp" class="form-text text-muted">Também não gostamos de SPAM =/</small>
                     </div>
                     <div class="form-group">
-                        <label for="txtSenha">Senha</label>
+                        <label for="txtSenha" style="color: white; font-size: 30px">Senha</label>
                         <input type="password" class="form-control" id="txtSenha">
                     </div>
-                    <button type="button" class="btn btn-primary" onclick="autenticar();">Enviar Dados</button> 
+                    <button type="button" class="btn btn-primary" style="margin-left: 140px " onclick="autenticar();">Login</button> 
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-12">
+            <div class="row" id="erro">
+                <div class="col-md-12" id="erro" style="color: white; font-size: 30px">
                     <div class="text-center" id="erroMSG"></div>
                 </div>
             </div>

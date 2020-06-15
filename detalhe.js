@@ -10,5 +10,4 @@ function recuperaDetalhe(){
     fetch("http://localhost:8080/solicitacoes/"+numero)
        .then(res => res.json())
        .then(res => console.log(res));
-
 }
