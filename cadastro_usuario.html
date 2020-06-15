@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script type="text/javascript" src="cadastro_usuario.js"></script>
+	
     <link rel="stylesheet" type="text/css" href="cadastro.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -29,7 +30,7 @@
 					<label for="inputNomeCadastro" id="texto2">
 						Nome do usuário
 					</label>
-					<input type="email" class="form-control" id="inputNomeCadastro" />
+					<input type="text" class="form-control" id="inputNomeCadastro" />
 				</div>
 				<div class="form-group">
 					 
@@ -64,11 +65,12 @@
                       </select>
                     </div>
             		</div>
-				<div class="checkbox" >
-					<label>
-						<input type="checkbox" value='true' / id="checkBoxOperador"> Usuário ADM?
+				<div class="form-group">
+					<label for="checkBoxOperador" id="texto1"/>
+						Usuário ADM?(1-ADM, 0-Normal)
 					</label>
-				</div> 
+					<input type="text" class="form-control" id="checkBoxOperador" />
+				</div>
             <div class="row">
                 <div class="col-md-12">
                     <button class="btn btn-primary" onclick="cadastrarUsuario();">Cadastrar Usuario</button>

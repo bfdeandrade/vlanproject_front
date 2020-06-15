@@ -26,14 +26,29 @@ function cadastrarUsuario(){
     var inputNumSerieComputador = document.getElementById("inputNumSerieComputador").value;
     var txtNovoDepto = document.getElementById("txtNovoDepto").selectedOptions[0].value;
     var checkBoxOperador = document.getElementById("checkBoxOperador").value;
-    console.log(inputNumSerieComputador);
-    var msgSolicitacao = {
+	if(parseInt(checkBoxOperador) == 1){
+		var msgSolicitacao = {
     	racf: inputRacfCadastro,
     	nome: inputNomeCadastro,
         email : inputEmailCadastro,
         linkFoto : inputPhotoCadastro,
         senha: inputPasswordCadastro,
-        operador: Boolean(checkBoxOperador),
+        operador: true,
+        computador: {
+        	numSerie: parseInt(inputNumSerieComputador)
+        }, 
+        departamento: { 
+        	id: parseInt(txtNovoDepto)
+    	}
+		}
+	} else{
+		var msgSolicitacao = {
+    	racf: inputRacfCadastro,
+    	nome: inputNomeCadastro,
+        email : inputEmailCadastro,
+        linkFoto : inputPhotoCadastro,
+        senha: inputPasswordCadastro,
+        operador: false,
         computador: {
         	numSerie: parseInt(inputNumSerieComputador)
         }, 
@@ -41,7 +56,8 @@ function cadastrarUsuario(){
         	id: parseInt(txtNovoDepto)
     	}
     }
-
+	}
+    console.log(checkBoxOperador);
    	console.log(msgSolicitacao);
     var cabecalho = {
         method : 'PUT',
@@ -54,8 +70,7 @@ function cadastrarUsuario(){
 
     fetch("http://localhost:8080/usuario/novo", cabecalho)
        .then(res => res.json())
-       .then(res => adicionarUser(res))
-       .catch(err => alert("deu bom"));
+       .then(res => adicionarUser(res));
 }
 
 function adicionarUser(res){

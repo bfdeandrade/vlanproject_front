@@ -9,3 +9,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
 }
+#titulo {
+	font-size: calc(1.8em + 2.0vw);
+	font-weight: 700;
+	letter-spacing: .01em;
+	padding: 2rem 0 0 4.5rem;
+	text-shadow: .022em .022em .022em #111;
+	color: #fff;
+}
+#titulo2 {
+	font-size: calc(1.8em + 2.0vw);
+	font-weight: 700;
+	letter-spacing: .01em;
+	padding: 2rem 0 0 4.5rem;
+	text-shadow: .022em .022em .022em #111;
+	color: #fff;
+}
