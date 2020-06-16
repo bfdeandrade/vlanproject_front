@@ -1,4 +1,4 @@
-var templateBio  = '<h3> <STRONG> {{NUMEROSOL}}  </STRONG></h3>'+
+var templateBio  = '<h3> <STRONG> Número da solicitação: {{NUMEROSOL}}  </STRONG></h3>'+
                    '<p> '+
 				   '<strong>Data Solicitação: </strong> {{DATASOL}} <br>'+
 				   '<strong>Justificativa: </strong> {{JUSTIF}} <br>'+
@@ -34,14 +34,20 @@ function mostrarSoliticao(res){
   // a idéia aqui é preencher as coisas
     // foto
     // bio
-	console.log(user);
-    var strBio = templateBio.replace("{{NOME}}", res.solicitante.nome)
+	
+    var strBio = templateBio.replace("{{NUMEROSOL}}",res.numero)
+							.replace("{{DATASOL}}", res.dataSolicitacao)
+							.replace("{{JUSTIF}}", res.justificativa)
+							.replace("{{COMANDROT}}", res.comandoRoteador)
+							.replace("{{NOME}}", res.solicitante.nome)
                             .replace("{{RACF}}", res.solicitante.racf)
                             .replace("{{EMAIL}}", res.solicitante.email)
                             .replace("{{DEPARTAMENTO}}",res.solicitante.departamento.nome)
                             .replace("{{NUMSERIE}}",res.solicitante.computador.numSerie)
                             .replace("{{DESCRICAO}}",res.solicitante.computador.descricao)
-                            .replace("{{CONECTOR}}",res.solicitante.computador.conectorRede);
+                            .replace("{{CONECTOR}}",res.solicitante.computador.conectorRede)
+							.replace("{{VLANORI}}",res.origem.vlan)
+							.replace("{{VLANDES}}",res.destino.vlan);
                 
     document.getElementById("descSol").innerHTML = strBio;
 
